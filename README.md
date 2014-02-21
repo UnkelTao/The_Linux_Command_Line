@@ -7,6 +7,8 @@ The Linux Command Line(中文PDF)
 
 觉得网页版毕竟不太方便，所以打算做一个PDF版本，边学边做，暂时只做了前两章。
 
+##[下载PDF](https://github.com/UnkelTao/The-Linux-Command-Line/raw/master/Book.pdf)
+
 ##使用Latex进行编写
 
 ###个人版本Ctex最新版套装
