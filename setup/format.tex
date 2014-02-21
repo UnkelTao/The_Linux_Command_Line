@@ -1,0 +1,212 @@
+% set up fonts
+  \setCJKmainfont[BoldFont={Adobe Heiti Std},ItalicFont={Adobe Kaiti Std}]{Adobe Song Std}
+  \setCJKsansfont{Adobe Heiti Std}
+  \setCJKmonofont{Adobe Kaiti Std}
+  \setCJKfamilyfont{song}{Adobe Song Std}
+  \setCJKfamilyfont{hei}{Adobe Heiti Std}
+  \setCJKfamilyfont{fs}{Adobe Fangsong Std}
+  \setCJKfamilyfont{kai}{Adobe Kaiti Std}
+%% Custom stock paper and page size
+\setstocksize{303mm}{216mm}
+\settrimmedsize{\stockheight}{\stockwidth}{*}
+
+%% Adjust margins around typeblock
+\setlrmarginsandblock{23mm}{18mm}{*}
+\setulmarginsandblock{23mm}{23mm}{*}
+
+%% Header and footer heights
+\setheadfoot{\baselineskip}{10mm}
+\setlength\headsep{7mm}
+
+%% To apply and enforce layout
+\checkandfixthelayout
+
+%% Command to hold chapter illustration image
+\newcommand\chapterillustration{}
+
+
+%% Define a fancy chapter style
+\makechapterstyle{FancyChap}{
+%% Vertical Space before main text starts
+\setlength\beforechapskip{0pt}
+\setlength\midchapskip{0pt}
+\setlength\afterchapskip{137mm}
+%% Will print chapter number and title
+%% in one go ourselves
+\renewcommand*\printchaptername{}
+\renewcommand*\printchapternum{}
+%%% Re-define how the chapter title is printed
+\def\printchaptertitle##1{
+
+%=========定义颜色===================================
+%\definecolor{blueblack}{cmyk}{0,0,0,0.35}%浅黑
+\definecolor{lightgray}{gray}{0.9}
+\definecolor{blueblack}{RGB}{0,0,135}
+\definecolor{darkblue}{cmyk}{1,0,0,0}%纯蓝
+\definecolor{lightblue}{cmyk}{0.15,0,0,0}%浅蓝
+%====================================================
+
+
+
+%% Background image at top of page
+\ThisULCornerWallPaper{1}{\chapterillustration}
+%% Draw a semi-transparent rectangle across the top
+\tikz[overlay,remember picture]
+  \fill[fill=LightSalmon1,opacity=.7]
+  (current page.north west) rectangle 
+  ([yshift=-3cm] current page.north east);
+  %% Check if on an odd or even page
+  \strictpagecheck\checkoddpage
+  %% On odd pages, "logo" image at lower right
+  %% corner; Chapter number printed near spine
+  %% edge (near the left); chapter title printed
+  %% near outer edge (near the right).
+  \ifoddpage{
+    \ThisLRCornerWallPaper{.35}{fern_mo_01}
+    \begin{tikzpicture}[overlay,remember picture]
+    \node[anchor=south west,
+      xshift=20mm,yshift=-30mm,
+      font=\sffamily\bfseries\huge] 
+      at (current page.north west) 
+      {\chaptername\chapternamenum\thechapter};
+    \node[fill=Sienna!80!black,text=white,
+      font=\Huge\bfseries, 
+      inner ysep=12pt, inner xsep=20pt,
+      rounded rectangle,anchor=east, 
+      xshift=-20mm,yshift=-30mm] 
+      at (current page.north east) {##1};
+    \end{tikzpicture}
+  }
+  %% On even pages, "logo" image at lower left
+  %% corner; Chapter number printed near outer
+  %% edge (near the right); chapter title printed
+  %% near spine edge (near the left).
+  \else {
+    \ThisLLCornerWallPaper{.35}{fern_mo_01}
+    \begin{tikzpicture}[overlay,remember picture]
+    \node[anchor=south east,
+      xshift=-20mm,yshift=-30mm,
+      font=\sffamily\bfseries\huge] 
+      at (current page.north east)
+      {\chaptername\chapternamenum\thechapter};
+    \node[fill=Sienna!80!black,text=white,
+      font=\Huge\bfseries,
+      inner sep=12pt, inner xsep=20pt,
+      rounded rectangle,anchor=west,
+      xshift=20mm,yshift=-30mm] 
+      at ( current page.north west) {##1};
+    \end{tikzpicture}
+  }
+  \fi
+}
+}
+
+
+%% Define a fancy chapter style for unnumbered
+%% chapters (e.g. the Table of Contents)
+\makechapterstyle{FancyUnnumberedChap}{
+%% Vertical Space before main text starts
+\setlength\beforechapskip{0pt}
+\setlength\midchapskip{0pt}
+\setlength\afterchapskip{47mm}
+%% Will print chapter number and title
+%% in one go ourselves
+\renewcommand*\printchaptername{}
+\renewcommand*\printchapternum{}
+%%% Re-define how the chapter title is printed
+\def\printchaptertitle##1{
+%% Draw a semi-transparent rectangle across the top
+\tikz[overlay,remember picture]
+  \fill[fill=LightSalmon1,opacity=.7]
+  (current page.north west) rectangle 
+  ([yshift=-3cm] current page.north east);
+  %% Check if on an odd or even page
+  \strictpagecheck\checkoddpage
+  \ifoddpage{
+    \begin{tikzpicture}[remember picture, overlay]
+    \node[fill=Sienna!80!black,text=white,
+      font=\Huge\bfseries, 
+      inner ysep=12pt, inner xsep=20pt,
+      rounded rectangle,anchor=east, 
+      xshift=-20mm,yshift=-30mm] 
+      at (current page.north east) {##1};
+    \end{tikzpicture}
+  }
+  \else {
+    \begin{tikzpicture}[remember picture, overlay]
+    \node[fill=Sienna!80!black,text=white,
+      font=\Huge\bfseries,
+      inner sep=12pt, inner xsep=20pt,
+      rounded rectangle,anchor=west,
+      xshift=20mm,yshift=-30mm] 
+      at ( current page.north west) {##1};
+    \end{tikzpicture}
+  }
+  \fi
+}
+}
+
+
+%% Set the uniform width of the colour box
+%% displaying the page number in footer
+%% to the width of "99"
+\newlength\pagenumwidth
+\settowidth{\pagenumwidth}{99}
+
+%% Define style of page number colour box
+\tikzset{pagefooter/.style={
+anchor=base,font=\sffamily\bfseries\small,
+text=white,fill=Sienna!80!black,text centered,
+text depth=17mm,text width=\pagenumwidth}}
+
+%% Concoct some colours of our own
+\definecolor[named]{GreenTea}{HTML}{CAE8A2}
+\definecolor[named]{MilkTea}{HTML}{C5A16F}
+
+%% Sometimes I prefer not to upper-case my
+%% running headers
+\nouppercaseheads
+
+%%%%%%%%%%
+%%% Re-define running headers on non-chapter odd pages
+%%%%%%%%%%
+\makeoddhead{headings}
+%% Left header is empty but I'm using it as a hook to paint the
+%% background rectangles underneath everything else
+{\begin{tikzpicture}[remember picture,overlay]
+\fill[MilkTea!25!white] (current page.north east) 
+	rectangle (current page.south west);
+\fill[white, rounded corners] 
+	([xshift=-10mm,yshift=-20mm]current page.north east) rectangle 	
+	([xshift=15mm,yshift=17mm]current page.south west);
+\end{tikzpicture}}%
+%% Blank centre header
+{}%
+%% Display a decorate line and the right mark (chapter title)
+%% at right end
+{\begin{tikzpicture}[xshift=-.75\baselineskip,yshift=.25\baselineskip,remember picture, overlay,fill=GreenTea,draw=GreenTea]\fill circle(3pt);\draw[semithick](0,0) -- (current page.west |- 0,0);\end{tikzpicture}\sffamily\itshape\small\rightmark}
+
+%%%%%%%%%%
+%%% Re-define running footers on odd pages
+%%% i.e. display the page number on the right
+%%%%%%%%%%
+\makeoddfoot{headings}{}{}{%
+\tikz[baseline]\node[pagefooter]{\thepage};}
+\makeoddfoot{plain}{}{}{\tikz[baseline]\node[pagefooter]{\thepage};}
+
+%%%%%%%%%%
+%%% Re-define running headers on non-chapter even pages
+%%%%%%%%%%
+\makeevenhead{headings}
+%% Draw the background rectangles; then the left mark (section
+%% title) and the decorate line
+{{\begin{tikzpicture}[remember picture,overlay]
+\fill[MilkTea!25!white] (current page.north east) rectangle (current page.south west);
+\fill[white, rounded corners] ([xshift=-15mm,yshift=-20mm]current page.north east) rectangle ([xshift=10mm,yshift=17mm]current page.south west);
+\end{tikzpicture}}%
+\sffamily\itshape\small\leftmark\ 
+\begin{tikzpicture}[xshift=.5\baselineskip,yshift=.25\baselineskip,remember picture, overlay,fill=GreenTea,draw=GreenTea]\fill (0,0) circle (3pt); \draw[semithick](0,0) -- (current page.east |- 0,0 );\end{tikzpicture}}{}{}
+\makeevenfoot{headings}{\tikz[baseline]\node[pagefooter]{\thepage};}{}{}
+\makeevenfoot{plain}{\tikz[baseline]\node[pagefooter]{\thepage};}
+%% Empty centre and right headers on even pages
+{}{}

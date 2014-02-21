@@ -1,0 +1,19 @@
+\BOOKMARK [0][-]{chapter*.1}{引言}{}% 1
+\BOOKMARK [1][-]{section*.2}{为什么使用命令行}{chapter*.1}% 2
+\BOOKMARK [1][-]{section*.2}{这本书讲什么}{chapter*.1}% 3
+\BOOKMARK [1][-]{section*.2}{谁应该读这本书}{chapter*.1}% 4
+\BOOKMARK [1][-]{section*.2}{这本书的内容}{chapter*.1}% 5
+\BOOKMARK [1][-]{section*.2}{怎样阅读这本书}{chapter*.1}% 6
+\BOOKMARK [1][-]{section*.2}{拓展阅读}{chapter*.1}% 7
+\BOOKMARK [-1][-]{part.1}{I 学习Shell}{}% 8
+\BOOKMARK [0][-]{chapter.1}{1 什么是 shell}{part.1}% 9
+\BOOKMARK [1][-]{section.1.1}{1.1 终端仿真器}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.2}{1.2 第一次按键}{chapter.1}% 11
+\BOOKMARK [1][-]{section.1.3}{1.3 试试运行一些简单命令}{chapter.1}% 12
+\BOOKMARK [1][-]{section.1.4}{1.4 结束终端会话}{chapter.1}% 13
+\BOOKMARK [1][-]{section.1.5}{1.5 拓展阅读}{chapter.1}% 14
+\BOOKMARK [0][-]{chapter.2}{2 文件系统中跳转}{part.1}% 15
+\BOOKMARK [1][-]{section.2.1}{2.1 理解文件系统树}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.2}{2.2 当前工作目录}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.3}{2.3 列出目录内容}{chapter.2}% 18
+\BOOKMARK [1][-]{section.2.4}{2.4 更改当前工作目录}{chapter.2}% 19

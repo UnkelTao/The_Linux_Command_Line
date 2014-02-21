@@ -1,0 +1,47 @@
+\frontmatter
+
+%%%%%%%%%%%%%%
+%% 封面页
+%%%%%%%%%%%%%%
+
+%% No header nor footer on the cover
+\thispagestyle{empty}
+
+%% Cover illustration
+\ThisLLCornerWallPaper{1}{grapes-in-my-studio-little-too-much-dust}
+
+%% Bar across the top
+\tikz[remember picture,overlay]%
+\node[fill=Sienna,text=white,font=\LARGE\bfseries,text=Cornsilk,%
+minimum width=\paperwidth,minimum height=5em,anchor=north]%
+at (current page.north){Exercises in \LaTeX};
+
+\vspace*{2\baselineskip}
+
+{\bfseries\itshape\color{LightGoldenrod!50!Gold}\fontsize{36pt}{46pt}\selectfont
+The Linux Command  \par 
+Line(中文版) \par}
+
+\vspace*{2\baselineskip}
+
+{\LARGE\color{LightGoldenrod}
+一本值得阅读的 \scshape{好书}\par
+}
+
+\tikz[remember picture,overlay]%
+\node[fill=Sienna,font=\LARGE\bfseries,text=Cornsilk,%
+minimum width=\paperwidth,minimum height=3em,anchor=south]%
+ at (current page.south) {好奇猫 \LaTeX\ User Group};
+
+
+\begin{center}
+\LARGE\bfseries\color{SaddleBrown!30!black}
+
+\end{center}
+
+\cleartorecto
+
+
+%%%%%%
+%结束封面
+%%%%%%

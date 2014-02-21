@@ -1,0 +1,43 @@
+\section{试试运行一些简单命令}
+
+现在，我们学习了怎样输入命令，那我们执行一些简单的命令吧。第一个命令是 date。 这个命令显示系统当前时间和日期。
+
+\begin{lstlisting}
+[me@linuxbox ~]$ date
+Thu Oct 25 13:51:54 EDT 2007
+\end{lstlisting}
+
+\par 一个相关联的命令，cal，它默认显示当前月份的日历。
+
+\begin{lstlisting}
+[me@linuxbox ~]$ cal
+October 2007
+Su Mo Tu We Th Fr Sa
+1 2 3 4 5 6
+7 8 9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+\end{lstlisting}
+
+\par 查看磁盘剩余空间的数量，输入 df:
+\begin{lstlisting}
+[me@linuxbox ~]$ df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/sda2             15115452   5012392   9949716  34% /
+/dev/sda5             59631908  26545424  30008432  47% /home
+/dev/sda1               147764     17370   122765   13% /boot
+tmpfs                   256856         0   256856    0% /dev/shm
+\end{lstlisting}
+
+\par 同样地，显示空闲内存的数量，输入命令 free。
+
+\begin{lstlisting}
+[me@linuxbox ~]$ free
+total       used       free     shared    buffers     cached
+Mem:       2059676     846456    1213220          0
+44028      360568
+-/+ buffers/cache:     441860    1617816
+Swap:      1042428          0    1042428
+\end{lstlisting}
+

@@ -1,0 +1,30 @@
+\contentsline {chapter}{引言}{ii}{chapter*.1}
+\contentsline {section}{为什么使用命令行}{iii}{section*.2}
+\contentsline {section}{这本书讲什么}{iii}{section*.2}
+\contentsline {section}{谁应该读这本书}{iii}{section*.2}
+\contentsline {section}{这本书的内容}{iv}{section*.2}
+\contentsline {section}{怎样阅读这本书}{iv}{section*.2}
+\contentsline {subsection}{前提条件}{iv}{section*.2}
+\contentsline {subsubsection}{为什么我不叫它“GNU/Linux”}{v}{section*.2}
+\contentsline {section}{拓展阅读}{v}{section*.2}
+\contentsline {part}{\partnumberline {I}学习Shell}{1}{part.1}
+\contentsline {chapter}{\chapternumberline {1}什么是 shell}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}终端仿真器}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}第一次按键}{2}{section.1.2}
+\contentsline {subsection}{命令历史}{3}{lstnumber.-3.2}
+\contentsline {subsection}{移动光标}{3}{lstnumber.-3.2}
+\contentsline {subsubsection}{关于鼠标和光标}{3}{lstnumber.-3.2}
+\contentsline {section}{\numberline {1.3}试试运行一些简单命令}{4}{section.1.3}
+\contentsline {section}{\numberline {1.4}结束终端会话}{4}{section.1.4}
+\contentsline {subsection}{幕后控制台}{5}{lstnumber.-8.1}
+\contentsline {section}{\numberline {1.5}拓展阅读}{5}{section.1.5}
+\contentsline {chapter}{\chapternumberline {2}文件系统中跳转}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}理解文件系统树}{6}{section.2.1}
+\contentsline {section}{\numberline {2.2}当前工作目录}{7}{section.2.2}
+\contentsline {section}{\numberline {2.3}列出目录内容}{7}{section.2.3}
+\contentsline {section}{\numberline {2.4}更改当前工作目录}{7}{section.2.4}
+\contentsline {subsection}{绝对路径}{8}{section.2.4}
+\contentsline {subsection}{相对路径}{8}{lstnumber.-11.5}
+\contentsline {subsubsection}{有用的快捷键}{9}{lstnumber.-17.1}
+\contentsline {subsubsection}{关于文件名的重要规则}{9}{table.2.1}
+\contentsfinish 

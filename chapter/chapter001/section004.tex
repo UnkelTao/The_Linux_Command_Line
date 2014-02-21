@@ -1,0 +1,13 @@
+\section{结束终端会话}
+
+我们可以终止一个终端会话，通过关闭终端仿真器窗口，或者是在 shell 提示符下输入 exit 命令：
+
+\begin{lstlisting}
+[me@linuxbox ~]$ exit
+\end{lstlisting}
+
+\fboxrule=6pt \fboxsep=4pt
+\begin{colorboxed}[boxcolor=lightgray,bgcolor=white]
+\subsection{幕后控制台}
+即使，终端仿真器没有运行，几个终端会话仍然在后台运行着。它们叫做虚拟终端 或者是虚拟控制台。在大多数 Linux 发行版中，这些终端会话都可以访问， 按下 Ctrl-Alt-F1到 Ctrl-Alt-F6访问不同的虚拟终端。当一个会话被访问的时候， 它会显示登录提示框，我们需要输入用户名和密码。从一个虚拟控制台转换到另一个， 按下 Alt 和 F1-F6。返回图形桌面，按下 Alt-F7。
+\end{colorboxed}

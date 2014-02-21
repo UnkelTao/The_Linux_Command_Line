@@ -1,0 +1,12 @@
+*.aux 
+*.bak 
+*.log 
+*.bbl 
+*.dvi 
+*.blg 
+*.thm 
+*.toc 
+*.gz 
+*.out 
+*.fls 
+*.gz*
