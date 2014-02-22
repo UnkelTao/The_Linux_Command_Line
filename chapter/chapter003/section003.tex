@@ -1,0 +1,69 @@
+\section{用 less 浏览文件内容} % (fold)
+\label{sec:用_less_浏览文件内容}
+
+less 命令是一个用来浏览文本文件的程序。纵观 Linux 系统，有许多人类可读的文本文件。less 程序为我们检查文本文件 提供了方便。
+
+\fboxrule=6pt \fboxsep=4pt
+\begin{colorboxed}[boxcolor=lightgray,bgcolor=white]
+\subsection{什么是``文本''}
+在计算机中，有许多方法可以表达信息。所有的方法都涉及到，在信息与一些数字之间确立一种关系，而这些数字可以 用来表达信息。毕竟，计算机只能理解数字，这样所有的数据都被转换成数值表示法。
+
+\par 有些数值表达法非常复杂（例如压缩的视频文件），而其它的就相当简单。最早也是最简单的一种表达法，叫做 ASCII 文本。ASCII（发音是"As-Key"）是美国信息交换标准码的简称。这是一个简单的编码方法，它首先 被用在电传打字机上，用来实现键盘字符到数字的映射。
+
+\par 文本是简单的字符与数字之间的一对一映射。它非常紧凑。五十个字符的文本翻译成五十个字节的数据。文本只是包含 简单的字符到数字的映射，理解这点很重要。它和一些文字处理器文档不一样，比如说由微软和 OpenOffice.org 文档 编辑器创建的文件。这些文件，和简单的 ASCII 文件形成鲜明对比，它们包含许多非文本元素，来描述它的结构和格式。 普通的 ASCII 文件，只包含字符本身，和一些基本的控制符，像制表符，回车符及换行符。纵观 Linux 系统，许多文件 以文本格式存储，也有许多 Linux 工具来处理文本文件。甚至 Windows 也承认这种文件格式的重要性。著名的 NOTEPAD.EXE 程序就是一个 ASCII 文本文件编辑器。
+\end{colorboxed}
+
+\par 为什么我们要查看文本文件呢？ 因为许多包含系统设置的文件（叫做配置文件），是以文本格式存储的，阅读它们 可以更深入的了解系统是如何工作的。另外，许多系统所用到的实际程序（叫做脚本）也是以这种格式存储的。 在随后的章节里，我们将要学习怎样编辑文本文件，为的是修改系统设置，还要学习编写自己的脚本文件，但现在我们只是看看它们的内容而已。
+
+\par less 命令是这样使用的：
+
+\begin{lstlisting}
+less filename
+\end{lstlisting}
+
+\par 一旦运行起来，less 程序允许你前后滚动文件。例如，要查看一个定义了系统中全部用户身份的文件，输入以下命令：
+\begin{lstlisting}
+[me@linuxbox ~]$ less /etc/passwd
+\end{lstlisting}
+
+\par 一旦 less 程序运行起来，我们就能浏览文件内容了。如果文件内容多于一页，那么我们可以上下滚动文件。按下“q”键， 退出 less 程序。
+
+\par 下表列出了 less 程序最常使用的键盘命令。
+\begin{table}[ht!]
+% increase table row spacing, adjust to taste
+%\renewcommand{\arraystretch}{1.2}
+\caption{less 命令}
+\label{table_example}
+\centering
+\begin{tabular}{p{4cm}p{11cm}}
+%\begin{tabular}{c|c|c}
+\hline
+%\begin{tabular}{|p{0.18\textwidth}|p{0.36\textwidth}|p{0.36\textwidth}|}
+命令 & 行为\\
+
+\hline
+Page UP or b &	向后翻滚一页\\
+Page Down or space & 向前翻动一页 \\
+UP Arrow & 向前移动一行\\
+Down Arrow &	向后移动一行\\
+G	& 移动到最后一行\\
+1G or g	& 移动到开头一行\\
+/charaters	& 向前查找指定的字符串\\
+n	& 向前查找下一个出现的字符串，这个字符串是之前所指定查找的\\
+h	& 显示帮助屏幕\\
+q	& 退出 less 程序\\
+\hline
+\end{tabular}
+\end{table}
+
+\fboxrule=6pt \fboxsep=4pt
+\begin{colorboxed}[boxcolor=lightgray,bgcolor=white]
+\subsection{less 就是 more（禅语：色即是空）}
+
+ess 程序是早期 Unix 程序 more 的改进版。“less” 这个名字，对习语 “less is more” 开了个玩笑， 这个习语是现代主义建筑师和设计者的座右铭。
+
+\par less 属于”页面调度器”程序类，这些程序允许通过页方式，在一页中轻松地浏览长长的文本文档。然而 more 程序只能向前分页浏览，而 less 程序允许前后分页浏览，它还有很多其它的特性。
+\end{colorboxed}
+
+
+% section 用_less_浏览文件内容 (end)

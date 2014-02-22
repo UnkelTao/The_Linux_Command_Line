@@ -63,7 +63,7 @@ command -options arguments
 [me@linuxbox ~]$ ls -lt --reverse
 \end{lstlisting}
 
-\par ls 命令有大量的选项。表4-1列出了最常使用的选项。
+\par ls 命令有大量的选项。表3-1列出了最常使用的选项。
 
 \begin{table}[ht!]
 % increase table row spacing, adjust to taste
@@ -71,7 +71,8 @@ command -options arguments
 \caption{ls 命令选项}
 \label{table_example}
 \centering
-\begin{tabular}{c|c|c}
+\begin{tabular}{p{1.5cm}p{3.5cm}p{10cm}}
+%\begin{tabular}{c|c|c}
 \hline
 %\begin{tabular}{|p{0.18\textwidth}|p{0.36\textwidth}|p{0.36\textwidth}|}
  选项 & 长选项 & 描述 \\
@@ -91,7 +92,7 @@ command -options arguments
 
 \subsection{深入研究长格式输出}
 正如我们先前知道的，“-l”选项导致 ls 的输出结果以长格式输出。这种格式包含大量的有用信息。下面的例子目录来自 于 Ubuntu 系统：
-
+(注：由于排版原因，删除了原文的的一部分.)
 \begin{lstlisting}
 -rw-r--r-- 1 root root 3576296 2007-04-03 11:05 Experience ubuntu.ogg
 -rw-r--r-- 1 root root 1186219 2007-04-03 11:05 kubuntu-leaflet.png 
@@ -99,12 +100,30 @@ command -options arguments
 -rw-r--r-- 1 root root   44355 2007-04-03 11:05 logo-Kubuntu.png
 -rw-r--r-- 1 root root   34391 2007-04-03 11:05 logo-Ubuntu.png
 -rw-r--r-- 1 root root   32059 2007-04-03 11:05 oo-cd-cover.odf
--rw-r--r-- 1 root root  159744 2007-04-03 11:05 oo-derivatives.doc
--rw-r--r-- 1 root root   27837 2007-04-03 11:05 oo-maxwell.odt
--rw-r--r-- 1 root root   98816 2007-04-03 11:05 oo-trig.xls
--rw-r--r-- 1 root root  453764 2007-04-03 11:05 oo-welcome.odt
--rw-r--r-- 1 root root  358374 2007-04-03 11:05 ubuntu Sax.ogg 
 \end{lstlisting}
 
-\par 选一个文件，来看一下各个输出字段的含义：
+\par 选一个文件，来看一下各个输出字段的含义(表3-2)：
 
+\begin{table}[ht!]
+% increase table row spacing, adjust to taste
+%\renewcommand{\arraystretch}{1.2}
+\caption{ls 长格式列表的字段}
+\label{table_example}
+\centering
+\begin{tabular}{p{4cm}p{11cm}}
+%\begin{tabular}{c|c|c}
+\hline
+%\begin{tabular}{|p{0.18\textwidth}|p{0.36\textwidth}|p{0.36\textwidth}|}
+ 字段 & 含义 \\
+ \hline 
+ -rw-r--r--	& 对于文件的访问权限。第一个字符指明文件类型。在不同类型之间，开头的“－”说明是一个普通文件，“d”表明是一个目录。其后三个字符是文件所有者的访问权限，再其后的三个字符是文件所属组中成员的访问权限，最后三个字符是其他所 有人的访问权限。这个字段的完整含义将在第十章讨论。\\
+1 & 文件的硬链接数目。参考随后讨论的关于链接的内容。 \\
+root & 文件属主的用户名。 \\
+root & 文件所属用户组的名字。 \\
+32059 & 以字节数表示的文件大小。\\
+2007-04-03 11:05 & 上次修改文件的时间和日期。 \\
+oo-cd-cover.odf	& 文件名。 \\
+\hline
+
+\end{tabular}
+\end{table}

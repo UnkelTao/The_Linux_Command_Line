@@ -1,0 +1,21 @@
+\section{确定文件类型} % (fold)
+\label{sec:确定文件类型}
+随着探究操作系统的进行，知道文件包含的内容是很有用的。我们将用 file 命令来确定文件的类型。我们之前讨论过， 在 Linux 统中，并不要求文件名来反映文件的内容。然而，一个类似 “picture.jpg” 的文件名，我们会期望它包含 JPEG 压缩图像，但 Linux 却不这样要求它。可以这样调用 file 命令：
+
+\begin{lstlisting}
+file filename
+\end{lstlisting}
+
+\par 当调用 file 命令后，file 命令会打印出文件内容的简单描述。例如：
+
+\begin{lstlisting}
+[me@linuxbox ~]$ file picture.jpg
+picture.jpg: JPEG image data, JFIF standard 1.01
+\end{lstlisting}
+
+\par 有许多类型的文件。事实上，在类似于 Unix 操作系统中比如说 Linux，有个普遍的观念就是“任何东西都是一个文件”。 随着课程的进行，我们将会明白这句话的真谛。
+
+\par 虽然系统中许多文件格式是熟悉的，例如 MP3和 JPEG 文件，但也有一些文件格式比较含蓄，极少数文件相当陌生。
+
+
+% section 确定文件类型 (end)
