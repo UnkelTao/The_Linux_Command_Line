@@ -73,10 +73,10 @@ command -options arguments
 \centering
 \begin{tabular}{p{1.5cm}p{3.5cm}p{10cm}}
 %\begin{tabular}{c|c|c}
-\hline
+\rowcolor[gray]{0.8}
 %\begin{tabular}{|p{0.18\textwidth}|p{0.36\textwidth}|p{0.36\textwidth}|}
  选项 & 长选项 & 描述 \\
-\hline
+
  -a & --all & 列出所有文件，甚至包括文件名以圆点开头的隐藏文件。 \\
 -d & --directory & 通常，如果指定了目录名，ls 命令会列出这个目录中的内容，而不是目录本身。 把这个选项与-l 选项结合使用，可以看到所指定目录的详细信息，而不是目录中的内容。\\
 -F & --classify	& 这个选项会在每个所列出的名字后面加上一个指示符。例如，如果名字是 目录名，则会加上一个``/''字符。 \\
@@ -85,7 +85,7 @@ command -options arguments
 -r & --reverse & 以相反的顺序来显示结果。通常，ls 命令的输出结果按照字母升序排列。 \\
 -S & & 命令输出结果按照文件大小来排序。\\
 -t & & 按照修改时间来排序。\\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -112,18 +112,17 @@ command -options arguments
 \centering
 \begin{tabular}{p{4cm}p{11cm}}
 %\begin{tabular}{c|c|c}
-\hline
+\rowcolor[gray]{0.8}
 %\begin{tabular}{|p{0.18\textwidth}|p{0.36\textwidth}|p{0.36\textwidth}|}
  字段 & 含义 \\
- \hline 
+
  -rw-r--r--	& 对于文件的访问权限。第一个字符指明文件类型。在不同类型之间，开头的“－”说明是一个普通文件，“d”表明是一个目录。其后三个字符是文件所有者的访问权限，再其后的三个字符是文件所属组中成员的访问权限，最后三个字符是其他所 有人的访问权限。这个字段的完整含义将在第十章讨论。\\
+ \midrule
 1 & 文件的硬链接数目。参考随后讨论的关于链接的内容。 \\
-root & 文件属主的用户名。 \\
 root & 文件所属用户组的名字。 \\
 32059 & 以字节数表示的文件大小。\\
 2007-04-03 11:05 & 上次修改文件的时间和日期。 \\
 oo-cd-cover.odf	& 文件名。 \\
-\hline
-
+\bottomrule
 \end{tabular}
 \end{table}
