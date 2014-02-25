@@ -1,0 +1,67 @@
+\section{cp — 复制文件和目录} % (fold)
+\label{sec:cp_复制文件和目录}
+
+cp 命令，复制文件或者目录。它有两种使用方法：
+\begin{lstlisting}
+cp item1 item2
+\end{lstlisting}
+\par 复制单个文件或目录”item1”到文件或目录”item2”，和：
+\begin{lstlisting}
+cp item... directory
+\end{lstlisting}
+\par 复制多个项目（文件或目录）到一个目录下。
+
+\subsection{有用的选项和实例}
+这里列举了 cp 命令一些有用的选项（短选项和等效的长选项）：
+
+\begin{center} \tablecaption{CP选项 \label{tab:super4}}
+\tablefirsthead{%
+\rowcolor[gray]{0.8}
+\multicolumn{1}{l}{\textbf{选项}} & 
+\multicolumn{1}{c}{\textbf{意义}} \\ }
+\tablehead{\multicolumn{2}{c}{%
+\small 表 \ref{tab:super4} (续) } \\
+\rowcolor[gray]{0.8}
+\multicolumn{1}{l}{\textbf{选项}} & 
+\multicolumn{1}{c}{\textbf{意义}} \\}
+\tabletail{\bottomrule
+\multicolumn{2}{c}{\small 接下页} \\
+}
+\tablelasttail{\bottomrule}
+
+\begin{supertabular}{p{3.5cm}p{10cm}}
+-a, -\-archive	& 复制文件和目录，以及它们的属性，包括所有权和权限。 通常，复本具有用户所操作文件的默认属性。\\
+-i, -\-interactive & 	在重写已存在文件之前，提示用户确认。如果这个选项不指定， cp 命令会默认重写文件。\\
+-r, -\-recursive	& 递归地复制目录及目录中的内容。当复制目录时， 需要这个选项（或者-a 选项）。\\
+-u, -\-update	& 当把文件从一个目录复制到另一个目录时，仅复制 目标目录中不存在的文件，或者是文件内容新于目标目录中已经存在的文件。\\
+-v, -\-verbose	& 显示翔实的命令操作信息 \\
+
+\end{supertabular}
+\end{center}
+
+
+\begin{center} \tablecaption{CP实例 \label{tab:super5}}
+\tablefirsthead{%
+\rowcolor[gray]{0.8}
+\multicolumn{1}{l}{\textbf{命令}} & 
+\multicolumn{1}{c}{\textbf{运行结果}} \\ }
+\tablehead{\multicolumn{2}{c}{%
+\small 表 \ref{tab:super5} (续) } \\
+\rowcolor[gray]{0.8}
+\multicolumn{1}{l}{\textbf{命令}} & 
+\multicolumn{1}{c}{\textbf{运行结果}} \\}
+\tabletail{\bottomrule
+\multicolumn{2}{c}{\small 接下页} \\
+}
+\tablelasttail{\bottomrule}
+
+\begin{supertabular}{p{3.5cm}p{10cm}}
+cp file1 file2 & 复制文件 file1内容到文件file2。如果 file2已经存在，file2的内容会被 file1的 内容重写。如果 file2不存在，则会创建 file2。\\
+cp -i file1 file2	& 这条命令和上面的命令一样，除了如果文件 file2存在的话，在文件 file2被重写之前， 会提示用户确认信息。\\
+cp file1 file2 dir1	& 复制文件 file1和文件 file2到目录 dir1。目录 dir1必须存在。\\
+cp dir1/* dir2	& 使用一个通配符，在目录 dir1中的所有文件都被复制到目录 dir2中。 dir2必须已经存在。\\
+cp -r dir1 dir2 & 复制目录 dir1中的内容到目录 dir2。如果目录 dir2不存在， 创建目录 dir2，操作完成后，目录 dir2中的内容和 dir1中的一样。 如果目录 dir2存在，则目录 dir1(和目录中的内容)将会被复制到 dir2中。\\
+
+\end{supertabular}
+\end{center}
+% section cp_复制文件和目录 (end)

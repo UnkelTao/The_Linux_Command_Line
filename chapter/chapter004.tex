@@ -1,0 +1,37 @@
+\renewcommand\chapterillustration{cherry-tomatos}
+\chapter{操作文件和目录}
+
+此时此刻，我们已经准备好了做些真正的工作！这一章节将会介绍以下命令：
+
+\begin{itemize}
+	\item cp — 复制文件和目录
+	\item mv — 移动/重命名文件和目录
+	\item mkdir — 创建目录
+	\item rm — 删除文件和目录
+	\item ln — 创建硬链接和符号链接
+\end{itemize}
+
+\par 这五个命令属于最常使用的 Linux 命令之列。它们用来操作文件和目录。
+
+\par 现在，坦诚地说，用图形文件管理器来完成一些由这些命令执行的任务会更容易些。使用文件管理器， 我们可以把文件从一个目录拖放到另一个目录，剪贴和粘贴文件，删除文件等等。那么， 为什么还使用早期的命令行程序呢？
+
+\par 答案是命令行程序，功能强大灵活。虽然图形文件管理器能轻松地实现简单的文件操作，但是对于 复杂的文件操作任务，则使用命令行程序比较容易完成。例如，怎样复制一个目录下的 HTML 文件 到另一个目录，但这些 HTML 文件不存在于目标目录，或者是文件版本新于目标目录里的文件？ 要完成这个任务，使用文件管理器相当难，使用命令行相当容易：
+
+\begin{lstlisting}
+cp -u *.html destination 
+\end{lstlisting}
+
+\input{./chapter/chapter004/section001.tex}
+
+\input{./chapter/chapter004/section002.tex}
+
+\input{./chapter/chapter004/section003.tex}
+
+
+% \input{./chapter/chapter003/section004.tex}
+
+% \input{./chapter/chapter003/section005.tex}
+
+% \input{./chapter/chapter003/section006.tex}
+
+% \input{./chapter/chapter003/section007.tex}
